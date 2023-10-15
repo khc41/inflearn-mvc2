@@ -83,10 +83,15 @@ public class BasicController {
     }
 
     @GetMapping("operation")
-    public String operation(Model model){
+    public String operation(Model model) {
         model.addAttribute("nullData", null);
         model.addAttribute("data", "Spring!");
         return "basic/operation";
+    }
+
+    @GetMapping("/attribute")
+    public String attribute() {
+        return "basic/attribute";
     }
 
     @Data
